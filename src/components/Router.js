@@ -1,15 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route} from "react-router-dom";
+import {HashRouter, Route} from "react-router-dom";
 import App from "../App";
 import Recipe from "./Recipe";
 
 const Router = () => (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>     
-      <Switch>
+  <HashRouter basename={process.env.PUBLIC_URL}>
         <Route path="/" component={App} exact />
         <Route path="/recipe/:id" component={Recipe} />
-      </Switch> 
-    </BrowserRouter>
+    </HashRouter>
 );
 
     
